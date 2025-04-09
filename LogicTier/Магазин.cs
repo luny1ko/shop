@@ -10,12 +10,12 @@ namespace LogicTier
     public class Магазин
     {
         private List<ТоварнаяПозиация> _товары = new List<ТоварнаяПозиация>();
-        private Товар t;
+        
 
         public Магазин()
         {
             List<Товар> tmp = ВсеТовары.ПолучитьВсеТовары();
-            foreach (var i in tmp)
+            foreach (var t in tmp)
             {
                 _товары.Add(new ТоварнаяПозиация(t));
             }
